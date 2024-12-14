@@ -45,7 +45,7 @@ const Atlas = () => {
         </div>
 
         <div className="flex flex-row gap-[3%]">
-          <div className="lg:w-[40%] flex ml-10 items-center justify-center ">
+          <div className="lg:w-[40%] ml-10 items-center justify-center hidden lg:flex">
             <img
               src={images[currentImageIndex]}
               alt="Slideshow"

@@ -113,7 +113,32 @@ const Footer = () => {
 
         {/* Footer Divider */}
         <div className="border bg-white" />
-        <p className="regular-14 w-full text-center text-white">All rights reserved</p>
+        <p 
+        style={{
+          cursor: "pointer",
+          textDecoration: "none",
+          transition: "transform 0.3s ease, color 0.3s ease", 
+          fontWeight: 600,
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "scale(1.1)"; 
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "scale(1)"; 
+        }}
+        className="regular-20 w-full text-center text-white">
+          <a
+            href="https://drive.google.com/file/d/12HttbvLdsHKNo67kQEx8WaK0KhzZAw5a/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "inherit", // Keeps the text color consistent
+              textDecoration: "none",
+            }}
+          >
+            Click me to view Genevieve's Resume
+          </a>
+        </p>
       </div>
     </div>
   )
