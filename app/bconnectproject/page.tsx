@@ -128,6 +128,36 @@ const BConnect = () => {
                 Barangay Connect was developed with complete code implementation, but it was never deployed. The project was built to function fully with both frontend and backend components, though it remains as a completed, non-deployed project.
               </p>
             </div>
+            <div className="mt-5 flex flex-row gap-3">
+                  <button
+                    style={{
+                      color: 'white',
+                      padding: '5px 15px',
+                      fontSize: '15px',
+                      borderRadius: '30px',
+                      cursor: 'pointer',
+                      fontWeight: 500,
+                      borderWidth: 3,
+                      borderColor: 'white'
+                    }}
+                  >
+                    React.js
+                  </button>
+                  <button
+                    style={{
+                      color: 'white',
+                      padding: '5px 15px',
+                      fontSize: '15px',
+                      borderRadius: '30px',
+                      cursor: 'pointer',
+                      fontWeight: 500,
+                      borderWidth: 3,
+                      borderColor: 'white'
+                    }}
+                  >
+                    Tailwind CSS
+                  </button>
+              </div>
           </div>
         </div>
       </div>

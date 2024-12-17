@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from "next/image";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 const Atlas = () => {
   const images = ['/atlasimg1.png', '/atlasimg2.png', '/atlasimg3.png']; 
@@ -37,9 +38,18 @@ const Atlas = () => {
             zIndex: 10, 
             backgroundColor: 'transparent',
             cursor: 'pointer',
+            transition: 'transform 0.3s ease, filter 0.3s ease',
             color: 'white',
           }}
           onClick={() => window.history.back()} 
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'scale(0.9)';
+            e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.8))';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'scale(1)';
+            e.currentTarget.style.filter = 'none';
+          }}
         >
           <ArrowBackIcon style={{ fontSize: '30px' }} />
         </div>
@@ -63,16 +73,42 @@ const Atlas = () => {
             className="lg:w-[55%] w-full p-6 flex flex-col justify-center text-white"
           >
             <div>
-              <h1
-                style={{
-                  fontSize: 'clamp(20px, 5vw, 36px)',
-                  wordSpacing: '5px',
-                  fontWeight: 'bold',
-                }}
-                className="mb-1"
+              <a 
+              href="https://citu-atlas.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               >
-                Atlas
-              </h1>
+              <div className='flex flex-row'
+                style={{ cursor: 'pointer' }}>
+                <h1
+                  style={{
+                    fontSize: 'clamp(20px, 5vw, 36px)',
+                    wordSpacing: '5px',
+                    fontWeight: 'bold',
+                  }}
+                  className="mb-1"
+                >
+                  Atlas
+                </h1>
+                <span
+                  style={{
+                    cursor: 'pointer',
+                    transition: 'transform 0.3s ease, filter 0.3s ease',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'scale(0.9)';
+                    e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.8))';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'scale(1)';
+                    e.currentTarget.style.filter = 'none';
+                  }}
+                  className='mt-3 ml-2'
+                >
+                  <ArrowOutwardIcon />
+                </span>
+              </div>
+              </a>
               <p
                 style={{
                   fontSize: 'clamp(14px, 3vw, 18px)',
@@ -106,7 +142,7 @@ const Atlas = () => {
                   lineHeight: '1.5',
                 }}
               >
-                I am the Lead UI/UX Developer for Atlas, responsible for designing the application's landing page and most of its features. I ensured the interface is user-friendly and intuitive, allowing users to navigate it effortlessly without additional guidance. Additionally, I created the Atlas logo and prioritized making the application's design visually appealing.
+                I am one of the Frontend Developer and the Lead UI/UX Designer for Atlas, responsible for designing the application's landing page and most of its features. I ensured the interface is user-friendly and intuitive, allowing users to navigate it effortlessly without additional guidance. Additionally, I created the Atlas logo and prioritized making the application's design visually appealing.
               </p>
             </div>
             <div className="mt-5">
@@ -126,33 +162,65 @@ const Atlas = () => {
                   lineHeight: '1.5',
                 }}
               >
-                Feel free to explore the application by clicking the button below, which will take you to the deployed version. This will allow you to experience the features, interface, and functionality of Atlas firsthand.
+                Feel free to explore the application by clicking the <span className='font-bold underline'>arrow button above</span>, which will take you to the deployed version. This will allow you to experience the features, interface, and functionality of Atlas firsthand.
               </p>
-              <div className="mt-5">
-                <a
-                    href="https://citu-atlas.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+              <div className="mt-5 flex flex-row gap-3">
                   <button
                     style={{
-                      backgroundColor: '#c59670',
                       color: 'white',
-                      padding: '10px 50px',
-                      fontSize: '16px',
+                      padding: '5px 15px',
+                      fontSize: '15px',
                       borderRadius: '30px',
-                      border: 'none',
                       cursor: 'pointer',
-                      fontWeight: 600,
-                      boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)',
-                      transition: 'background-color 0.3s ease',
+                      fontWeight: 500,
+                      borderWidth: 3,
+                      borderColor: 'white'
                     }}
-                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#aa7b5d')}
-                    onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#c59670')}
                   >
-                    Visit Atlas
+                    Gemini AI
                   </button>
-                </a>
+                  <button
+                    style={{
+                      color: 'white',
+                      padding: '5px 15px',
+                      fontSize: '15px',
+                      borderRadius: '30px',
+                      cursor: 'pointer',
+                      fontWeight: 500,
+                      borderWidth: 3,
+                      borderColor: 'white'
+                    }}
+                  >
+                    Next.js
+                  </button>
+                  <button
+                    style={{
+                      color: 'white',
+                      padding: '5px 15px',
+                      fontSize: '15px',
+                      borderRadius: '30px',
+                      cursor: 'pointer',
+                      fontWeight: 500,
+                      borderWidth: 3,
+                      borderColor: 'white'
+                    }}
+                  >
+                    React.js
+                  </button>
+                  <button
+                    style={{
+                      color: 'white',
+                      padding: '5px 15px',
+                      fontSize: '15px',
+                      borderRadius: '30px',
+                      cursor: 'pointer',
+                      fontWeight: 500,
+                      borderWidth: 3,
+                      borderColor: 'white'
+                    }}
+                  >
+                    Tailwind CSS
+                  </button>
               </div>
             </div>
           </div>

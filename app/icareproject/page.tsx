@@ -128,6 +128,64 @@ const ICare = () => {
                 The iCare application was designed using Figma, with no code implementation and was not deployed. The project focused on creating detailed prototypes to visualize the user interface and user experience, which were intended as a foundation for future development.
               </p>
             </div>
+            <div className="mt-5 flex flex-row gap-3">
+                  <button
+                    style={{
+                      color: 'white',
+                      padding: '5px 15px',
+                      fontSize: '15px',
+                      borderRadius: '30px',
+                      cursor: 'pointer',
+                      fontWeight: 500,
+                      borderWidth: 3,
+                      borderColor: 'white'
+                    }}
+                  >
+                    Prototype
+                  </button>
+                  <button
+                    style={{
+                      color: 'white',
+                      padding: '5px 15px',
+                      fontSize: '15px',
+                      borderRadius: '30px',
+                      cursor: 'pointer',
+                      fontWeight: 500,
+                      borderWidth: 3,
+                      borderColor: 'white'
+                    }}
+                  >
+                    UI/UX Design 
+                  </button>
+                  <button
+                    style={{
+                      color: 'white',
+                      padding: '5px 15px',
+                      fontSize: '15px',
+                      borderRadius: '30px',
+                      cursor: 'pointer',
+                      fontWeight: 500,
+                      borderWidth: 3,
+                      borderColor: 'white'
+                    }}
+                  >
+                    Figma 
+                  </button>
+                  <button
+                    style={{
+                      color: 'white',
+                      padding: '5px 15px',
+                      fontSize: '15px',
+                      borderRadius: '30px',
+                      cursor: 'pointer',
+                      fontWeight: 500,
+                      borderWidth: 3,
+                      borderColor: 'white'
+                    }}
+                  >
+                    Canva 
+                  </button>
+              </div>
           </div>
         </div>
       </div>

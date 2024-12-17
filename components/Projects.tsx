@@ -31,7 +31,19 @@ const DescriptionOfMe = ({ description, title, subtitle, link }: Description) =>
           <div className="flex flex-col w-[100%]">
           <Link href={link}>
             <button
-              style={{borderRadius: '50px', transition: "transform 0.3s ease"}} 
+              style={{
+                borderRadius: '50px',
+                cursor: 'pointer',
+                transition: 'transform 0.3s ease, filter 0.3s ease', 
+              }} 
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(0.9)';
+                e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.8))';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.filter = 'none';
+              }}
               className="text-white hover:bg-opacity-90 transition-all ml-2 text-left hover:scale-105">
             <h2
               style={{
@@ -69,7 +81,7 @@ const DescriptionOfMe = ({ description, title, subtitle, link }: Description) =>
 
 const Projects = () => {
   return (
-    <section id="projects" className="2xl:max-container relative flex flex-col px-10 py-10 lg:mb-10 lg:py-5 xl:mb-20 mt-24">
+    <section id="projects" className="2xl:max-container relative flex flex-col px-10 py-10 lg:mb-10 lg:py-5 xl:mb-20 mt-[-20px]">
       <div className="hide-scrollbar flex h-[450px] w-full items-start justify-start gap-8 overflow-x-auto lg:h-[500px] xl:h-[600px]">
       <h1
             style={{
@@ -77,13 +89,12 @@ const Projects = () => {
               fontSize: "clamp(15px, 5vw, 60px)",
               color: "#fbfcfe",
               zIndex: 10,
-              top: "5%",
               textAlign: "center",
               width: "100%",
               fontWeight: "500",
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.4)"
             }}
-            className="font-brittany mt-[-20px]"
+            className="font-brittany mt-[-20px] sm:justify-center sm:items-center"
           >
             My Projects
           </h1>

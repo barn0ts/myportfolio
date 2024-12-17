@@ -33,7 +33,19 @@ const DescriptionOfMe = ({ description, title, subtitle }: Description) => {
         initial="hidden"
         whileInView={"show"}
         viewport={{once: false, amount: 0.7}}
-        style={{background: "#2b2828", borderWidth: '4px', borderColor: 'white'}}
+        style={{
+          background: "#2b2828", 
+          borderWidth: '4px', 
+          borderColor: 'white',
+          cursor: 'pointer',
+          transition: 'transform 0.3s ease, filter 0.3s ease',
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.8))';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.filter = 'none';
+        }}
         className="p-1 lg:max-w-[500px] xl:max-w-[734px] xl:rounded-1xl xl:px-16 xl:py-16 sm:px-10 xs:px-10 xs:py-10 sm:py-10 relative w-full overflow-hidden rounded-3xl">
         <h2
           style={{wordSpacing: "5px", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)", fontSize: "clamp(10px, 3vw, 32px)"}}
