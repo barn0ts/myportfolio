@@ -49,8 +49,8 @@ const Hero = () => {
               }}
             >
               <div style={{ fontWeight: "500", fontSize: "clamp(8px, 1vw, 20px)" }}>
-                <p style={{ margin: 0 }}>Mandaue City,</p>
-                <p style={{ margin: 0, color: "#2b2828",}}>Cebu Philippines</p>
+                <p style={{ margin: 0 }}>UI/UX Designer</p>
+                <p style={{ margin: 0, color: "#2b2828",}}>Frontend Developer</p>
               </div>
             </div>
             <div
