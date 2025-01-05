@@ -275,11 +275,11 @@ const Skills = () => {
                   <div className="mb-4">
                     Hi! I am Genevieve Miao
                   </div>
-                  <div className='flex flex-row gap-2 text-[4rem] font-bold mb-8'>
+                  <div className='flex flex-row gap-2 text-[1rem] lg:text-[4rem] font-bold mb-8'>
                   <div>
                     I am
                   </div>
-
+                {/* === */}
                   <div>
                     <Typewriter
                       options={{
